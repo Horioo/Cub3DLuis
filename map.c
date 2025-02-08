@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajorge-p <ajorge-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ajorge-p <ajorge-p@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 20:16:20 by luiberna          #+#    #+#             */
-/*   Updated: 2025/02/08 16:12:49 by ajorge-p         ###   ########.fr       */
+/*   Updated: 2025/02/08 22:52:12 by ajorge-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void count_config_lines(t_data *data, int fd, int *count, int *flag)
 {
     char *line;
 
+	(void)data;
     while ((line = get_next_line(fd)) && *flag < 6)
     {
         if (ft_strncmp(line, "C ", 2) == 0)

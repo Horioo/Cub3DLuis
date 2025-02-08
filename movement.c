@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   movement.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luiberna <luiberna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ajorge-p <ajorge-p@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 23:22:35 by luiberna          #+#    #+#             */
-/*   Updated: 2025/02/03 20:18:32 by luiberna         ###   ########.fr       */
+/*   Updated: 2025/02/08 22:53:27 by ajorge-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ void move_player3(t_player *player, char **map, double sin_angle, double cos_ang
 {
     double new_x;
     double new_y;
-    
+	
+    (void)sin_angle;
+	(void)cos_angle;
     new_x = player->pos_x;
     new_y = player->pos_y;
     if (player->key_left)

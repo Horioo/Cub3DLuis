@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_color.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajorge-p <ajorge-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ajorge-p <ajorge-p@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 16:40:17 by luiberna          #+#    #+#             */
-/*   Updated: 2025/02/08 15:48:57 by ajorge-p         ###   ########.fr       */
+/*   Updated: 2025/02/08 22:56:00 by ajorge-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,10 +99,10 @@ void check_color2(t_cube *cube, char *line, int fd)
 {
     int i;
     int j;
-    char **color_numbers;
 
     i = 0;
     j = 0;
+	(void)cube;
     while (line[i])
     {
         if (line[i] == ',')
@@ -122,9 +122,7 @@ void check_color(t_cube *cube, char *file)
 {
     int fd;
     char *line;
-    int i;
 
-    i = 0;
     fd = open(file, O_RDONLY);
     while ((line = get_next_line(fd)))
     {

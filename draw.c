@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luiberna <luiberna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ajorge-p <ajorge-p@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 17:58:05 by luiberna          #+#    #+#             */
-/*   Updated: 2025/02/05 17:58:36 by luiberna         ###   ########.fr       */
+/*   Updated: 2025/02/08 22:54:25 by ajorge-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void draw_ceiling(t_cube *cube, t_data *data, int ceiling_color)
     int y;
 
     y = 0;
+	(void)data;
     while (y < SCREEN_H / 2)
     {
         x = 0;
@@ -35,6 +36,7 @@ void draw_floor(t_cube *cube, t_data *data, int floor_color)
     int x;
     int y;
 
+	(void)data;
     y = SCREEN_H / 2;
     while (y < SCREEN_H)
     {

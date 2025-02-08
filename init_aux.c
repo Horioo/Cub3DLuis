@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_aux.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajorge-p <ajorge-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ajorge-p <ajorge-p@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 02:23:47 by luiberna          #+#    #+#             */
-/*   Updated: 2025/02/08 16:11:32 by ajorge-p         ###   ########.fr       */
+/*   Updated: 2025/02/08 22:53:44 by ajorge-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void    init_pixel_map(t_cube *cube, t_data *data)
 
 void init_ray(t_data *data, t_player *player, t_ray *ray, int x)
 {
+	(void)data;
     ray->camera_x = 2.0 * (double)x / (double)SCREEN_W - 1.0;
     ray->ray_dir_x = player->dir_x + player->plane_x * ray->camera_x;
     ray->ray_dir_y = player->dir_y + player->plane_y * ray->camera_x;

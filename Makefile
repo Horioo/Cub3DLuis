@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ajorge-p <ajorge-p@student.42.fr>          +#+  +:+       +#+         #
+#    By: ajorge-p <ajorge-p@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/27 12:32:15 by luiberna          #+#    #+#              #
-#    Updated: 2025/02/08 16:23:34 by ajorge-p         ###   ########.fr        #
+#    Updated: 2025/02/08 22:51:50 by ajorge-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS = main.c utils.c map.c map_utils.c textures.c free.c minimap.c movement.c \
 		init.c init_aux.c check.c keys.c draw.c raycasting.c clear.c \
 		color.c check_color.c verify_number.c
 
-CC = cc
+CC = cc -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)
 

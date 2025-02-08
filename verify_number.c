@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   verify_number.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajorge-p <ajorge-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ajorge-p <ajorge-p@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:23:44 by ajorge-p          #+#    #+#             */
-/*   Updated: 2025/02/08 16:34:57 by ajorge-p         ###   ########.fr       */
+/*   Updated: 2025/02/08 22:57:05 by ajorge-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void verify_number5(t_cube *cube, int count, char *line, int fd, char **color)
 		j = 0;
 		while (color[i][j])
 		{
-			if (count > 1 && j == ft_strlen(color[i]) - 1 && ft_isdigit(color[i][j]))
+			if (count > 1 && j == (int)ft_strlen(color[i]) - 1 && ft_isdigit(color[i][j]))
 			{
 				if (color[i][j - 1] == ' ')
 				{
@@ -79,7 +79,7 @@ void verify_number3(t_cube *cube, int count, char *line, int fd, char **color)
 		{
 			if (count > 1 && ft_isdigit(color[i][j]))
 			{
-				if (j - 1 >= 0 && j + 1 <= ft_strlen(color[i]) && color[i][j - 1] == ' ' && color[i][j + 1] == ' ')
+				if (j - 1 >= 0 && j + 1 <= (int)ft_strlen(color[i]) && color[i][j - 1] == ' ' && color[i][j + 1] == ' ')
 				{
 					close(fd);
 					free(line);
@@ -122,9 +122,7 @@ void verify_number(t_cube *cube, char *file)
 {
     int fd;
     char *line;
-    int i;
-
-    i = 0;
+	
     fd = open(file, O_RDONLY);
     while ((line = get_next_line(fd)))
     {

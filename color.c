@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   color.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luiberna <luiberna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ajorge-p <ajorge-p@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 00:05:20 by luiberna          #+#    #+#             */
-/*   Updated: 2025/02/07 16:42:59 by luiberna         ###   ########.fr       */
+/*   Updated: 2025/02/08 22:55:11 by ajorge-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void get_rgb(t_cube *cube, char *line, int *color)
     int i;
 
     i = 0;
+	(void)cube;
     color_parts = ft_split(line + 2, ',');
     if (!color_parts)
         return;
